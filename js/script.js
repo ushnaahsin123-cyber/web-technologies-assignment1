@@ -35,14 +35,23 @@ function initNavToggle() {
     });
   });
 
-  // Close the menu if the user presses Escape
-  document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && links.classList.contains('open')) {
       links.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
     }
   });
+
+  // Close the menu if the user clicks outside of it
+  document.addEventListener('click', (e) => {
+    const clickedInsideNav = toggle.contains(e.target) || links.contains(e.target);
+    if (!clickedInsideNav && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
+  
 
 /* ---------- Home hero: simulated SIEM terminal typing ---------- */
 function initTerminal() {
