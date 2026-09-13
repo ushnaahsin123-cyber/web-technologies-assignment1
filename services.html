@@ -43,11 +43,11 @@
       <div class="accordion">
 
         <div class="accordion-item open">
-          <button class="accordion-trigger" aria-expanded="true">
+          <button class="accordion-trigger" aria-expanded="true" aria-controls="panel-01"></button>
             <div class="title-wrap"><span class="idx">01</span><h3>Detection engineering</h3></div>
             <span class="plus"></span>
           </button>
-          <div class="accordion-panel">
+          <div class="accordion-panel" id="panel-01">
             <div class="accordion-panel-inner">
               <p>Writing detection logic that catches real behaviour without drowning the queue in false positives — for example a Splunk SPL query that flags a burst of failed SMB logins as a brute-force attempt rather than noise.</p>
               <div class="tool-chips"><span>Splunk SPL</span><span>SIEM tuning</span><span>Log correlation</span></div>

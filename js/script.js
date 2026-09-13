@@ -27,12 +27,20 @@ function initNavToggle() {
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close the menu once a link is chosen (mobile UX)
+    // Close the menu once a link is chosen (mobile UX)
   links.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       links.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
     });
+  });
+
+  // Close the menu if the user presses Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
