@@ -211,13 +211,34 @@ function initGalleryFilter() {
 }
 
 /* ---------- Gallery: project detail modal ---------- */
-function initProjectModal() {
+function initProjectModal()
+ {
   const overlay = document.querySelector('.modal-overlay');
   const cards = document.querySelectorAll('.project-card');
   if (!overlay || !cards.length) return;
 
   const modal = overlay.querySelector('.modal');
   const closeBtn = overlay.querySelector('.modal-close');
+  const slideImg = modal.querySelector('[data-modal-image]');
+  const dotsWrap = modal.querySelector('[data-modal-dots]');
+  const prevBtn = modal.querySelector('.slider-prev');
+  const nextBtn = modal.querySelector('.slider-next');
+
+  let currentImages = [];
+  let currentIndex = 0;
+
+  const renderSlide = () => {
+    slideImg.src = currentImages[currentIndex];
+    slideImg.alt = `${modal.querySelector('[data-modal-title]').textContent} screenshot ${currentIndex + 1} of ${currentImages.length}`;
+
+    dotsWrap.innerHTML = '';
+    currentImages.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', () => { currentIndex = i; renderSlide(); });
+      dotsWrap.appendChild(dot);
+    });
+  };
 
   const openModal = (card) => {
     modal.querySelector('[data-modal-title]').textContent = card.dataset.title;
@@ -240,6 +261,15 @@ function initProjectModal() {
       link.style.display = 'none';
     }
 
+    currentImages = card.dataset.images ? card.dataset.images.split(',').map((s) => s.trim()) : [];
+    currentIndex = 0;
+    if (currentImages.length) {
+      modal.querySelector('.modal-slider').style.display = '';
+      renderSlide();
+    } else {
+      modal.querySelector('.modal-slider').style.display = 'none';
+    }
+
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
@@ -248,6 +278,15 @@ function initProjectModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   };
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    renderSlide();
+  });
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    renderSlide();
+  });
 
   cards.forEach((card) => card.addEventListener('click', () => openModal(card)));
   closeBtn.addEventListener('click', closeModal);
