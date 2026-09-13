@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ushna Ahsin</title>
+<meta name="description" content="Cybersecurity projects by Ushna Ahsin, including a home SOC lab and a Python log analysis tool.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">UA</span>
+      Ushna Ahsin
+      <span class="brand-status"><span class="dot"></span>status: online</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="gallery.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">// case files</p>
+      <h1>Projects</h1>
+      <p>Two projects I've built end to end, from environment setup to write-up. Click a card for the full detail.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="lab">Lab builds</button>
+        <button class="filter-btn" data-filter="python">Tooling</button>
+      </div>
+
+      <div class="gallery-grid">
+
+        <article class="project-card"
+          data-category="lab"
+          data-title="Home SOC Lab"
+          data-meta="Lab build · VirtualBox + Splunk · MITRE ATT&CK T1110"
+          data-desc="An isolated VirtualBox lab environment built to act as a working SOC: a Windows victim VM and a Kali attacker VM on an internal-only network, with Splunk Enterprise deployed as the SIEM. I used Metasploit to simulate an SMB brute-force attack against the Windows host, then wrote a full SPL detection query to catch it and mapped the technique to MITRE ATT&CK T1110. The project is documented in a professional write-up and pushed to GitHub."
+          data-tools="VirtualBox, Splunk Enterprise, Metasploit, Kali Linux, SPL, MITRE ATT&CK"
+          data-link="https://github.com/ahs-u/home-soc-lab">
+          <div class="project-thumb">&#9635;</div>
+          <div class="project-body">
+            <span class="sev sev-high">T1110 · Brute Force</span>
+            <h3>Home SOC Lab</h3>
+            <p>Isolated VirtualBox + Splunk SIEM lab simulating and detecting an SMB brute-force attack.</p>
+          </div>
+        </article>
+
+        <article class="project-card"
+          data-category="python"
+          data-title="Indictra"
+          data-meta="Python tooling · Log analysis · Threat detection"
+          data-desc="A modular Python tool for log analysis and threat detection, built to run against real log data rather than samples. It ships with 20+ detection rules spread across six categories, supports both Linux auth.log and Windows Event Log CSV formats, and produces colour-coded terminal output alongside a generated HTML report. It also has a live log-tailing mode for watching activity as it happens. Currently being packaged up for a clean GitHub release."
+          data-tools="Python, Regex, HTML reporting, CLI tooling"
+          data-link="">
+          <div class="project-thumb">&#9638;</div>
+          <div class="project-body">
+            <span class="sev sev-info">20+ rules</span>
+            <h3>Indictra</h3>
+            <p>Modular log analysis and threat detection tool with dual log-format support and HTML reporting.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Project detail modal -->
+<div class="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h3 data-modal-title></h3>
+    <p class="modal-meta" data-modal-meta></p>
+    <p data-modal-desc></p>
+    <div class="tool-chips" data-modal-chips></div>
+    <div class="modal-links">
+      <a href="#" target="_blank" rel="noopener" class="btn btn-primary" data-modal-link>View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Ushna Ahsin</h4>
+        <p>Computer science student and SOC/blue-team intern, focused on detection engineering, log analysis, and incident response.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="gallery.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/ahs-u" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:ushnaahsin123@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Ushna Ahsin</span>
+      <span>Built with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

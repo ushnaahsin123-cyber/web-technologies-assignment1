@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ushna Ahsin</title>
+<meta name="description" content="About Ushna Ahsin: computer science student, SOC intern, and background in blue-team security work.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">UA</span>
+      Ushna Ahsin
+      <span class="brand-status"><span class="dot"></span>status: online</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="gallery.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">// analyst profile</p>
+      <h1>About me</h1>
+      <p>The short version: I like taking messy logs and turning them into a clear story about what happened.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-layout">
+
+      <aside class="about-side">
+        <div class="avatar-badge">UA</div>
+        <div class="meta-block" style="width:100%;">
+          <div class="meta-line"><span>Name</span><span>Ushna Ahsin</span></div>
+          <div class="meta-line"><span>Studying</span><span>BS Computer Science</span></div>
+          <div class="meta-line"><span>University</span><span>PUCIT</span></div>
+          <div class="meta-line"><span>Cohort</span><span>BSCS F24</span></div>
+          <div class="meta-line"><span>Focus</span><span>SOC / Blue Team</span></div>
+          <div class="meta-line"><span>Based in</span><span>Lahore, Pakistan</span></div>
+        </div>
+      </aside>
+
+      <div class="about-main">
+        <p style="font-size:1.02rem; color:var(--text);">
+          I'm a computer science student who ended up specialising early —
+          somewhere between coursework and late nights in a home-built
+          Splunk lab, blue-team security became the thing I actually wanted
+          to get good at. I care about the analyst side of security: reading
+          logs, writing detections that hold up under noise, and explaining
+          <em>why</em> an alert matters, not just that it fired.
+        </p>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="tab-education">Education</button>
+          <button class="tab-btn" data-tab="tab-experience">Experience</button>
+          <button class="tab-btn" data-tab="tab-interests">Focus areas</button>
+        </div>
+
+        <div id="tab-education" class="tab-panel active">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="when">2024 — present</span>
+              <h4>BS Computer Science, PUCIT</h4>
+              <p>Faculty of Information and Technology, University of the Punjab. Coursework spans web technologies, systems, and security fundamentals, alongside independent security projects on the side.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="when">Ongoing</span>
+              <h4>Self-directed security study</h4>
+              <p>Working through MITRE ATT&amp;CK and MITRE ATLAS for structured threat intelligence, and building hands-on labs to practice detection instead of only reading about it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-experience" class="tab-panel">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="when">Current</span>
+              <h4>SOC / Blue Team Intern — Chrysalis Tech Evolved</h4>
+              <p>Remote internship with a US-based managed service provider, working in a SOC/blue-team capacity: alert triage, monitoring, and detection work, with guidance from an internship mentor on the team.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="when">Independent</span>
+              <h4>Portfolio project builder</h4>
+              <p>Designed and built a home SOC lab and a custom log-analysis tool from the ground up, both documented and pushed to GitHub — see the Projects page for the full write-ups.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-interests" class="tab-panel">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="when">Core</span>
+              <h4>Detection engineering &amp; incident response</h4>
+              <p>Writing and tuning detection logic, and thinking through the full lifecycle of an incident from first alert to write-up.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="when">Core</span>
+              <h4>Threat intelligence frameworks</h4>
+              <p>Mapping activity to MITRE ATT&amp;CK (and increasingly MITRE ATLAS) so findings are structured and comparable, not just narrative.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="when">Exploring</span>
+              <h4>Network traffic monitoring</h4>
+              <p>Early experiments combining Python, Flask, and Scapy to inspect and reason about live network traffic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Ushna Ahsin</h4>
+        <p>Computer science student and SOC/blue-team intern, focused on detection engineering, log analysis, and incident response.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="gallery.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/ahs-u" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:ushnaahsin123@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Ushna Ahsin</span>
+      <span>Built with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

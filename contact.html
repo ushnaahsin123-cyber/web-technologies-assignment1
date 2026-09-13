@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ushna Ahsin</title>
+<meta name="description" content="Get in touch with Ushna Ahsin via the contact form or social links.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">UA</span>
+      Ushna Ahsin
+      <span class="brand-status"><span class="dot"></span>status: online</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Skills</a></li>
+      <li><a href="gallery.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">// open a ticket</p>
+      <h1>Get in touch</h1>
+      <p>Whether it's a role, a collaboration, or a question about a project — file the details below and I'll follow up.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+
+      <div class="contact-info-card">
+        <div class="field">
+          <span class="k">EMAIL</span>
+          <span class="v">ushnaahsin123@gmail.com</span>
+        </div>
+        <div class="field">
+          <span class="k">LOCATION</span>
+          <span class="v">Lahore, Pakistan</span>
+        </div>
+        <div class="field">
+          <span class="k">CURRENTLY</span>
+          <span class="v">SOC / blue-team intern, open to new opportunities</span>
+        </div>
+        <div class="field">
+          <span class="k">RESPONSE TIME</span>
+          <span class="v">Usually within 2 business days</span>
+        </div>
+        <div class="field">
+          <span class="k">ELSEWHERE</span>
+          <div class="social-row">
+            <a href="https://github.com/ahs-u" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="ticket-form" id="incident-form" novalidate>
+        <div class="ticket-head">
+          <span class="id">TICKET // NEW</span>
+          <span class="id">STATUS: DRAFT</span>
+        </div>
+
+        <div class="form-row">
+          <label for="f-name">Full name</label>
+          <input type="text" id="f-name" name="name" placeholder="Your name" autocomplete="name">
+          <span class="error-msg">Enter your full name.</span>
+        </div>
+
+        <div class="form-row">
+          <label for="f-email">Email address</label>
+          <input type="email" id="f-email" name="email" placeholder="you@example.com" autocomplete="email">
+          <span class="error-msg">Enter a valid email address.</span>
+        </div>
+
+        <div class="form-row">
+          <label for="f-priority">Priority</label>
+          <select id="f-priority" name="priority">
+            <option value="">Select one</option>
+            <option value="low">Low — just saying hi</option>
+            <option value="medium">Medium — general inquiry</option>
+            <option value="high">High — job or collaboration</option>
+          </select>
+          <span class="error-msg">Select a priority.</span>
+        </div>
+
+        <div class="form-row">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="What's this about?"></textarea>
+          <span class="error-msg">Message should be at least 12 characters.</span>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="btn btn-primary">Submit ticket</button>
+        </div>
+
+        <div class="form-success"><span></span></div>
+      </form>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Ushna Ahsin</h4>
+        <p>Computer science student and SOC/blue-team intern, focused on detection engineering, log analysis, and incident response.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="gallery.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://github.com/ahs-u" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:ushnaahsin123@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Ushna Ahsin</span>
+      <span>Built with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
